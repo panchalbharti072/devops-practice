@@ -17,7 +17,9 @@ steps:
     terraformVersion: 'latest'
 
 - script: terraform init
-  displayName: 'Terraform Init'
+  workingDirectory: terraform
+  displayName: Terraform Init
 
 - script: terraform validate
-  displayName: 'Terraform Validate'
+  workingDirectory: terraform
+  displayName: Terraform Validate
