@@ -12,8 +12,10 @@ pool:
 steps:
 - checkout: self
 
-- script: terraform version
-  displayName: Check Terraform Version
+- script: |
+    echo Agent is working
+    terraform version
+  displayName: Check Terraform
 
 - script: terraform init
   workingDirectory: terraform
