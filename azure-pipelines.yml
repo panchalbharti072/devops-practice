@@ -17,10 +17,12 @@ steps:
     terraform version
   displayName: Check Terraform
 
-- script: terraform init
-  workingDirectory: terraform
+- script: |
+    cd terraform
+    terraform init
   displayName: Terraform Init
 
-- script: terraform validate
-  workingDirectory: terraform
+- script: |
+    cd terraform
+    terraform validate
   displayName: Terraform Validate
