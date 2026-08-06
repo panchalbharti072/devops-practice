@@ -13,12 +13,17 @@ steps:
 - checkout: self
 
 - script: |
+    echo ==========================
+    echo HELLO BHARTI
     echo Agent is working
+    echo ==========================
     terraform version
   displayName: Check Terraform
 
 - script: |
+    dir
     cd terraform
+    dir
     terraform init
   displayName: Terraform Init
 
