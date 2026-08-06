@@ -10,4 +10,8 @@ pool:
   name: Default
 
 steps:
-- script: echo "HELLO FROM NEW PIPELINE"
+- checkout: self
+
+- script: |
+    echo "HELLO FROM NEW PIPELINE"
+  displayName: Hello Test
