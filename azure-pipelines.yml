@@ -12,6 +12,13 @@ pool:
 steps:
 - checkout: self
 
-- script: |
-    echo "HELLO FROM NEW PIPELINE"
-  displayName: Hello Test
+- script: terraform version
+  displayName: Check Terraform Version
+
+- script: terraform init
+  workingDirectory: terraform
+  displayName: Terraform Init
+
+- script: terraform validate
+  workingDirectory: terraform
+  displayName: Terraform Validate
