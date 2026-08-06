@@ -22,3 +22,7 @@ steps:
 - script: terraform validate
   workingDirectory: terraform
   displayName: Terraform Validate
+
+- script: terraform plan
+  workingDirectory: terraform
+  displayName: Terraform Plan
